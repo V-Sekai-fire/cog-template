@@ -173,3 +173,7 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 .cog
+*.json
+*.jpg
+*.pth
+prediction_image.png

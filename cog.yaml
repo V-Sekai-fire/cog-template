@@ -1,10 +1,11 @@
 build:
-  gpu: true
-  python_version: "3.10"
+  gpu: false
+  python_version: "3.9" # found via suffering
   python_packages:
     - "pydantic==1.10.8"
     - "torch==2.4.1"
-    - "rfdetr"
+    - "super-gradients"
   run:
     - curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/latest/download/pget_$(uname -s)_$(uname -m)" && chmod +x /usr/local/bin/pget
 predict: "predict.py:Predictor"   # Prediction endpoints
+train: "train.py:train"   # Train endpoints
